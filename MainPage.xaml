@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ahmetzanov06._04.MainPage">
+
+    <StackLayout Padding="20" Spacing="15">
+
+        <!-- Заголовок -->
+        <Label Text="Главное меню" 
+               FontSize="28" 
+               FontAttributes="Bold"
+               TextColor="#0066CC"
+               HorizontalOptions="Center"
+               Margin="0,0,0,10"/>
+
+        <!-- Список блюд -->
+        <Frame BackgroundColor="White" 
+               CornerRadius="15" 
+               BorderColor="#B3D4FF"
+               Padding="20"
+               HasShadow="False">
+
+            <StackLayout Spacing="12">
+                <!-- Основные блюда -->
+                <Button Text="Борщ - 320₽" 
+                        Clicked="OnAddItemClicked" 
+                        BackgroundColor="#E6F2FF"
+                        TextColor="#0066CC"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        CommandParameter="Борщ"/>
+
+                <Button Text="Стейк - 780₽" 
+                        Clicked="OnAddItemClicked"
+                        BackgroundColor="#E6F2FF"
+                        TextColor="#0066CC"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        CommandParameter="Стейк"/>
+
+                <Button Text="Плов - 450₽" 
+                        Clicked="OnAddItemClicked"
+                        BackgroundColor="#E6F2FF"
+                        TextColor="#0066CC"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        CommandParameter="Плов"/>
+
+                <Button Text="Салат Цезарь - 290₽" 
+                        Clicked="OnAddItemClicked"
+                        BackgroundColor="#E6F2FF"
+                        TextColor="#0066CC"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        CommandParameter="Салат Цезарь"/>
+
+                <Button Text="Пицца Маргарита - 520₽" 
+                        Clicked="OnAddItemClicked"
+                        BackgroundColor="#E6F2FF"
+                        TextColor="#0066CC"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        CommandParameter="Пицца Маргарита"/>
+
+                <!-- Десерты и напитки -->
+                <Button Text="Паста Карбонара - 480₽" 
+                        Clicked="OnAddItemClicked"
+                        BackgroundColor="#E6F2FF"
+                        TextColor="#0066CC"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        CommandParameter="Паста Карбонара"/>
+
+                <Button Text="Греческий салат - 350₽" 
+                        Clicked="OnAddItemClicked"
+                        BackgroundColor="#E6F2FF"
+                        TextColor="#0066CC"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        CommandParameter="Греческий салат"/>
+
+                <Button Text="Бургер - 420₽" 
+                        Clicked="OnAddItemClicked"
+                        BackgroundColor="#E6F2FF"
+                        TextColor="#0066CC"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        CommandParameter="Бургер"/>
+
+                <Button Text="Пельмени - 380₽" 
+                        Clicked="OnAddItemClicked"
+                        BackgroundColor="#E6F2FF"
+                        TextColor="#0066CC"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        CommandParameter="Пельмени"/>
+
+                <Button Text="Тирамису - 280₽" 
+                        Clicked="OnAddItemClicked"
+                        BackgroundColor="#E6F2FF"
+                        TextColor="#0066CC"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        CommandParameter="Тирамису"/>
+            </StackLayout>
+        </Frame>
+
+        <!-- Кнопка корзины -->
+        <Button Text="Перейти в корзину" 
+                Clicked="OnGoToCartClicked"
+                FontAttributes="Bold"
+                BackgroundColor="#0066CC"
+                TextColor="White"
+                CornerRadius="10"
+                HeightRequest="50"
+                Margin="0,20,0,0"/>
+    </StackLayout>
+</ContentPage>

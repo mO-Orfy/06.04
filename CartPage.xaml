@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ahmetzanov06._04.CartPage"
+             Title="CartPage">
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="Ваша корзина" 
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+        <ListView x:Name="CartItemsList"
+                 HasUnevenRows="True"
+                 SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10" ColumnDefinitions="*,Auto,Auto">
+                            <Label Text="{Binding Name}"
+                                 FontSize="16"/>
+                            <Label Grid.Column="1"
+                                 Text="{Binding Quantity, StringFormat='x{0}'}"
+                                 FontSize="16"/>
+                            <Button Grid.Column="2"
+                                  Text="Удалить"
+                                  Clicked="OnRemoveItemClicked"
+                                  BackgroundColor="LightGray"
+                                  CommandParameter="{Binding Name}"
+                                  FontSize="12"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label x:Name="TotalLabel"
+               FontSize="18"
+               FontAttributes="Bold"
+               HorizontalOptions="End"/>
+
+        <Button Text="Оформить заказ"
+                Clicked="OnCheckoutClicked"
+                 BackgroundColor="#0066CC"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="5"
+                HeightRequest="50"/>
+    </StackLayout>
+</ContentPage>
